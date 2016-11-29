@@ -1,5 +1,8 @@
 # 210_Coursework
-Set of weekly assignments and tasks.
+Set of pre-defined weekly assignments and tasks.
+
+Name: Shahzeb Dawood
+Student ID: 7015511
 
 Good Day! and welcome to my Coursework!.
 

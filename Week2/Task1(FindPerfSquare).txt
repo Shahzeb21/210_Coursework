@@ -1,0 +1,9 @@
+FINDPERFSQUARE(X)
+	StartPos <- X/2
+	FOR i <- (2 to StartPos)
+		Square <- i*i
+		IF Square < (X+1)
+			MyNum <- Square
+		ELSE
+			BREAK
+	RETURN(MyNum)

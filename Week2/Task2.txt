@@ -1,0 +1,55 @@
+FIRST ALGORITHIM (Shuffling Array)
+
+def ArrayShuffler(Elements):
+    from random import randint
+    Array = [] # n
+    NewArray = [] # n
+    ShuffledIndex = [] # n
+    
+    for i in range (0, Elements): 
+        Array.append(input("Enter element " + str(i+1) + " of array: ")) # n
+
+    
+    for s in range (0 , Elements):
+        index = randint(0 , Elements-1) # n
+        while index in ShuffledIndex: 
+            index = randint(0 , Elements-1) # n*n
+        ShuffledIndex.append(index) # n*n
+
+                
+    for index in ShuffledIndex: # Using the shuffled index List simply assigns elements of users array into a new shuffled array and prints
+        NewArray.append(Array[index]) # n
+
+    print (NewArray)
+
+Conclusion:
+Since the worst case scenario is n*n the run time of this code is O(n)**2
+
+FIRST ALGORITHIM (Trailing Zeros):
+
+def ZeroCalc(Number):
+    
+    FiveFactors = [] 
+    TwoFactors = [] 
+    
+    for Num in range (Number , 0 , -1):
+        if Num%5 == 0: # n
+            FiveFactors.append(Num) # n
+
+    count = 0
+    for num in FiveFactors:
+        while num%5 == 0: 
+            num = num / 5 # n*n
+            count = count + 1 # n*n
+    print(count)
+    
+    TensCount = 0
+    for s in FiveFactors:
+        if s%10 == 0: # n
+            TensCount = TensCount + 1 # n
+
+Conclusion:
+Since the worst case scenario commutes on an square of n, in the language of python, our time time is O(n)**2
+
+
+

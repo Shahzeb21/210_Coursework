@@ -1,0 +1,37 @@
+MATRIXCALCULATION(B,C,N,Operation)
+    
+    Result = []
+    FOR i <- 0 TO N
+        Result.append([]) # n
+        FOR s <- 0 TO N
+            Result[i].append(0) # n*n
+            
+    IF Operation = "+"
+    #For Addition
+
+        FOR row in range (0 , N):
+            FOR col in range (0 , N):
+                (Result[row])[col] = (B[row])[col] + (C[row])[col] # n*n
+        print(Result)
+        
+    ELSE IF Operation = "-"
+    #For Subtraction
+
+        FOR row  <- 0 TO N
+            FOR col <- 0 TO N
+                (Result[row])[col] <- (B[row])[col] - (C[row])[col] # n*n
+        print(Result)
+        
+    ELSE IF Operation = "*"
+    #For Multiplication
+        
+        FOR row  <- 0 TO N
+            FOR col <- 0 TO N
+                Sum <- 0 # n*n
+                FOR k <- 0 TO N 
+                    Sum +<- B[row][k] * C[k][col] # n*n*n
+                    Result[row][col] <- Sum # n*n*n
+        print(Result)
+
+Conclusion:
+Since the highest complexity we come across is n*n*n hence the complexity and run time is O(n)**3

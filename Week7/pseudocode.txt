@@ -1,0 +1,18 @@
+CLASS GRAPH
+
+     CONSTRUCTOR
+          self.graph <- {}
+
+     ADDNODE(self , node)
+          self.graph[node] <- []
+        
+     ADDEDGE(self , nodeA , nodeB)
+          self.graph[nodeA].append(nodeB)
+          self.graph[nodeB].append(nodeA)
+
+     ADD(self , nodes , connections)
+          FOR Node in nodes:
+               self.addNode(Node)
+    
+          FOR connections[(1,2)]:
+               self.addEdge(connections[1] , connections[2])

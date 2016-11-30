@@ -1,0 +1,12 @@
+REVERSESTRING(Sentence)
+    
+    List = []
+    Words = (Sentence.split(" ")) #Splitting a sentence into words and storing it to list "Words"
+    
+    for i <- length(Words) DOWNTO 0
+        NewList.append(Words[i-1])
+         
+    Final = ' '.join(List)
+    OUTPUT(Final)
+
+The big O notation for this is simply O(n) since executions are linear.

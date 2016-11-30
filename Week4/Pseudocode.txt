@@ -1,0 +1,37 @@
+First <- INPUT (Sequence of numbers)
+NumberFrom <- INPUT (First number of interval)
+NumberTill <- INPUT (Last number of interval)
+
+List <- First.split(" ")
+
+FOR i <- 0 TO length(List)
+    List[i] <- (List[i])  
+
+OUTPUT(List)
+
+Sorted <- sorted(List)
+OUTPUT(Sorted)
+
+
+StartPos <- 0
+EndPos <- length(Sorted)
+MidVal <- (StartPos + EndPos) // 2
+
+ShouldBreak <- False
+
+WHILE StartPos <= EndPos:
+        MidVal <- (StartPos + EndPos) // 2
+    
+        IF (Sorted[MidVal] > NumberFrom) and  (Sorted[MidVal] < NumberTill)
+            OUTPUT("True")
+            ShouldBreak <- True
+            
+    
+        ELSE IF Sorted[MidVal] > NumberTill
+            EndPos <- MidVal - 1 
+        
+        ELSE IF Sorted[MidVal] < NumberFrom
+            StartPos <- MidVal + 1
+            
+        IF ShouldBreak = "True"
+            break

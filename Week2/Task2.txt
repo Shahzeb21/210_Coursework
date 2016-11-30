@@ -23,9 +23,9 @@ def ArrayShuffler(Elements):
     print (NewArray)
 
 Conclusion:
-Since the worst case scenario is n*n the run time of this code is O(n)**2
+Since the worst case scenario is n*n the run time of this code, in the language of python, is O(n)**2
 
-FIRST ALGORITHIM (Trailing Zeros):
+SECOND ALGORITHIM (Trailing Zeros):
 
 def ZeroCalc(Number):
     

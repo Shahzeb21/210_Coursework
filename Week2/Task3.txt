@@ -11,7 +11,7 @@ MATRIXCALCULATION(B,C,N,Operation)
 
         FOR row in range (0 , N):
             FOR col in range (0 , N):
-                (Result[row])[col] = (B[row])[col] + (C[row])[col] # n*n
+                Result[row][col] = B[row][col] + C[row][col] # n*n
         print(Result)
         
     ELSE IF Operation = "-"
@@ -19,7 +19,7 @@ MATRIXCALCULATION(B,C,N,Operation)
 
         FOR row  <- 0 TO N
             FOR col <- 0 TO N
-                (Result[row])[col] <- (B[row])[col] - (C[row])[col] # n*n
+                Result[row][col] <- B[row][col] - C[row][col] # n*n
         print(Result)
         
     ELSE IF Operation = "*"

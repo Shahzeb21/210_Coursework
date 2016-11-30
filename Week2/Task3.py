@@ -22,7 +22,6 @@ def MatrixCalc(B,C,N,Operation):
         
     elif Operation == "*":
     #For Multiplication:
-        
         for row in range (0 , N):
             for col in range (0 , N):
                 Sum = 0

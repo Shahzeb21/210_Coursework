@@ -60,20 +60,22 @@ class Graph(object):
 
      def Dijkstra(self, source, destination):
           v = source
-          tw={}
+          tw={} # New Dictionary to store the connections and their new weights for initialise
           for n in self.graph:
-                    tw[n] = 999
-          tw[v] = 0
+                    tw[n] = 999 # Stores weight to 999 for all nodes except the source
+          tw[v] = 0 # Value for key "v" which is the source is 0
           print(tw)
-          Visited = []
+          Visited = [] # List initialised for visited nodes
           while v != destination:
-               for Adj in g.graph[v]:
-                    tw[Adj[0]]=tw[v]+Adj[1]
+               for Adj in g.graph[v]: # for nodes connected to the source
+                    tw[Adj[0]]=tw[v]+Adj[1] # Calculates weight.
                v=Adj[0]
                for g4 in g.graph[v]:
                     tw[g4[0]]=tw[v]+g4[1]
                break
           print(tw)
+          #I didnt go through with the whole Dijikstra's Algorithm, this si the partial solution that only calculates
+          # the tentative weight from the source all the other nodes.
                
                
           

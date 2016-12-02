@@ -51,33 +51,33 @@ class Graph(object):
 
      def add(self , nodes , connections):
           for Node in nodes:
-               self.addNode(Node)
+               self.addNode(Node)#Adds nodes to graph, from provided list called nodes
     
           for First , Second in connections:
-               self.addEdge(First , Second)
+               self.addEdge(First , Second) #Add edges to graph, from provided list of tuples including edges and weights called connections
                
      def DepthFS(self, StartNode):
-          S = Stack()
-          Visited = []
-          S.push(StartNode)
-          while not S.empty():
-               u = S.pop()
+          S = Stack() #initialises stack
+          Visited = [] #list initialised for nodes that have been visited
+          S.push(StartNode) # StartNode added to Stack S
+          while not S.empty(): #while s isnt empty
+               u = S.pop() # U becomes the last added element to Stack S
                if u not in Visited:
-                    Visited.append(u)
-                    for e in self.graph[u]:
-                         S.push(e)
+                    Visited.append(u) # Add u to visited if hasnt been visited before
+                    for e in self.graph[u]: 
+                         S.push(e) # Adds, one by one, to stack the nodes connected to U
           return Visited
 
      def BreadthFS(self, StartNode):
-          Q = Queue()
-          Visited = []
-          Q.enqueue(StartNode)
-          while not Q.empty():
-               u = Q.dequeue()
+          Q = Queue() #Initialises Queue
+          Visited = [] #list initialised for nodes that have been visited
+          Q.enqueue(StartNode) #Adds StartNode to Queue Q
+          while not Q.empty(): # While Q isnt empty
+               u = Q.dequeue() # U becomes the first added element in Queue Q
                if u not in Visited:
-                    Visited.append(u)
+                    Visited.append(u)# Add u to Visited if hasnt been visited before
                     for e in self.graph[u]:
-                         Q.enqueue(e)
+                         Q.enqueue(e)# Adds, one by one, to queue the nodes connected to U
           return Visited
                     
             

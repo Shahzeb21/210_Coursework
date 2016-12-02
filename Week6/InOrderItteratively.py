@@ -38,8 +38,8 @@ def InOrder(tree):
 
     while len(List) > 0:
         if Present:
-            while Present.left:
-                List.append(Present.left)
+            while Present.left: #while a left to the tree exists
+                List.append(Present.left) 
                 Present = Present.left
                 
         popped_node = List.pop()

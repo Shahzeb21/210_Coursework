@@ -1,7 +1,7 @@
 def AscSubSeq(Sequence):
 
-    TempList = []
-    FinalList = []
+    TempList = [] #Primarily holds asscending sequence
+    FinalList = [] #Ultimately stores largest asscending sequence
 
     for i in range (0 , len(Sequence)):
         TempList.append(Sequence[i])
@@ -10,8 +10,8 @@ def AscSubSeq(Sequence):
             FinalList = TempList
 
         if i!=len(Sequence)-1:
-            if Sequence[i+1] < Sequence[i]:
-                TempList=[]
+            if Sequence[i+1] < Sequence[i]: # if the next element in sequence is less than the one before, list descending, so empty
+                TempList=[]                  # TempList and start again.
             
                 
                 

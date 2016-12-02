@@ -24,10 +24,10 @@ def MatrixCalc(B,C,N,Operation):
     #For Multiplication:
         for row in range (0 , N):
             for col in range (0 , N):
-                Sum = 0
+                Total = 0
                 for k in range (0 , N):
-                    Sum += B[row][k] * C[k][col]
-                    Result[row][col] = Sum
+                    Total += B[row][k] * C[k][col]
+                    Result[row][col] = Total
         print(Result)
 
 r1 = MatrixCalc([(1,2),(3,4)],[(2,4),(6,8)], 2, "*")

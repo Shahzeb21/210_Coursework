@@ -27,16 +27,15 @@ class List(object):
             self.tail=x
 
     # Adding DeleteNode Method here
-    def delete (self, N):
+    def delete (self, N): # N being the node you want to delete
         if N.prev != None:
-            N.prev.next = N.next
+            N.prev.next = N.next #if the node to be deleted is not the first, then the node after takes position of N
         else:
-            self.head = N.next
+            self.head = N.next #if the first node is to be deleted, then the node after becomes the first node
         if N.next != None:
-            N.next.prev = N.prev
+            N.next.prev = N.prev #if the node N is not the last node then next node takes position of N.
         else:
-            self.tail = N.prev            
-            
+            self.tail = N.prev #if N is the last node then the node before it becomes last node.            
 
     def display(self):
         values=[]

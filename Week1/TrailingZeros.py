@@ -1,35 +1,21 @@
+     
 def ZeroCalc(Number):
     
-    FiveFactors = []
-    TwoFactors = []
+    FiveFactors = [] #initialise list for storage of factors of 5
     
     for Num in range (Number , 0 , -1):
         if Num%5 == 0:
             FiveFactors.append(Num)
-    #print (FiveFactors)
-
-    #for Num in range (Number , 0 , -1):
-        #if Num%2 == 0:
-            #TwoFactors.append(Num)
-    #print(TwoFactors)
 
     count = 0
     for num in FiveFactors:
+        #accomodates all the factors of five and breaks them down to just 5's
         while num%5 == 0:
             num = num / 5
-            count = count + 1
+            count = count + 1 #count of number of 5's in that specific factor, ultimately all 5's
     print(count)
     
     TensCount = 0
     for s in FiveFactors:
         if s%10 == 0:
-            TensCount = TensCount + 1
-
-    #ExclusiveFives = (len(FiveFactors)) - (TensCount)
-    #print(len(FiveFactors))
-    """if TwoFactors != 0:
-        TrailingZeros = TensCount + ExclusiveFives
-    else:
-        TrailingZeros = TensCount"""
-            
-#ZeroCalc()
+            TensCount = TensCount + 1 
